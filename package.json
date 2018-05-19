@@ -1,0 +1,12 @@
+{
+  "name": "barracuda",
+  "version": "0.0.1",
+  "description": "Like sense, for elasticsearch",
+  "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build"
+  },
+  "devDependencies": {
+    "webextension-toolbox": "latest"
+  }
+}
