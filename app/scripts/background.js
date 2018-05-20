@@ -7,7 +7,7 @@ browser.runtime.onInstalled.addListener((details) => {
 
 function openHomePage() {
    browser.tabs.create({
-     "url": "../pages/home.html"
+     "url": "../pages/app.html"
    });
 }
 
