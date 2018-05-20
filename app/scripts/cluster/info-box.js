@@ -1,9 +1,9 @@
 import React from 'react';
-import { Subhead, Card } from 'rebass';
+import { Subhead, Card, Small, Badge } from 'rebass';
 
 const ClusterCard = Card.extend`
-  background-color: lightblue;
-  color: indigo;
+  background-color: #f4f4f4;
+  color: #161616;
 `
 
 export default class InfoBox extends React.Component {
@@ -18,12 +18,14 @@ export default class InfoBox extends React.Component {
   }
 
   render() {
-    const name = this.state.name;
+    const {name, ip, environment} = this.state;
     return (
       <ClusterCard width={1/3}>
         <Subhead p={2}>
           {name}
         </Subhead>
+        <Small>{ip}</Small>
+        <Badge><Small>{environment}</Small></Badge>
       </ClusterCard>
     )
   }

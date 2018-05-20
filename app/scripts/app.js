@@ -20,6 +20,9 @@ class App extends React.Component {
           <Row>
             <ClusterView/>
           </Row>
+          <Row>
+            <Heading is='h3'>Tool Box</Heading>
+          </Row>
         </Container>
       </Provider>
     )

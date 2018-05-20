@@ -10,7 +10,39 @@ export default class ClusterView extends React.Component {
       this.state = {
         clusters: [
           {
-            name: 'yolo'
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
+          },
+          {
+            name: 'yolo',
+            ip: '127.0.0.1',
+            environment: 'local'
           }
         ]
       };
@@ -24,7 +56,9 @@ export default class ClusterView extends React.Component {
         <Flex alignItems='center' flexWrap='wrap' mx={-2}>
           {clusters.map((cluster, i) =>
               <Box px={2} py={2} width={1/3}>
-                <InfoBox name={cluster.name}/>
+                <InfoBox name={cluster.name}
+                         ip={cluster.ip}
+                         environment={cluster.environment}/>
               </Box>
           )}
         </Flex>
