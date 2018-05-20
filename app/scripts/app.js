@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, Flex, Box, Heading } from 'rebass';
+import { Provider, Container, Row, Heading } from 'rebass';
 
 import ClusterView from './cluster/cluster';
 
@@ -13,12 +13,14 @@ class App extends React.Component {
   render() {
     return (
       <Provider>
-        <Flex flexWrap='wrap'>
-          <Heading is='h1'>Welcome!</Heading>
-          <Box width={1}>
+        <Container>
+          <Row>
+            <Heading is='h1'>Welcome!</Heading>
+          </Row>
+          <Row>
             <ClusterView/>
-          </Box>
-        </Flex>
+          </Row>
+        </Container>
       </Provider>
     )
   }
