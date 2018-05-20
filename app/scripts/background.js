@@ -1,9 +1,14 @@
 browser.runtime.onInstalled.addListener((details) => {
   console.log('previousVersion', details.previousVersion)
+  browser.browserAction.setBadgeText({
+    text: `Hey!`
+  })
 })
 
-browser.browserAction.setBadgeText({
-  text: `'Allo`
-})
+function openHomePage() {
+   browser.tabs.create({
+     "url": "../pages/home.html"
+   });
+}
 
-console.log(`'Allo 'Allo! Event Page for Browser Action`)
+browser.browserAction.onClicked.addListener(openHomePage);
